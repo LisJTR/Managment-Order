@@ -11,20 +11,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout del código
-      uses: actions/checkout@v3
+      - name: Checkout del código
+        uses: actions/checkout@v3
 
-    - name: Configurar JDK 21
-      uses: actions/setup-java@v3
-      with:
-        java-version: '21'
-        distribution: 'temurin'
-		
-	- name: Dar permisos a mvnw
-	  run: chmod +x ./mvnw
-			  
-    - name: Construir con Maven
-      run: ./mvnw clean install
+      - name: Configurar JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
 
- #   - name: Ejecutar tests
- #    run: ./mvnw test
+      - name: Dar permisos a mvnw
+        run: chmod +x ./mvnw
+
+      - name: Construir con Maven
+        run: ./mvnw clean install
+
+#     - name: Ejecutar tests
+#       run: ./mvnw test
