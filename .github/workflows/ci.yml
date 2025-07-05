@@ -19,7 +19,10 @@ jobs:
       with:
         java-version: '21'
         distribution: 'temurin'
-
+		
+	- name: Dar permisos a mvnw
+	  run: chmod +x ./mvnw
+			  
     - name: Construir con Maven
       run: ./mvnw clean install
 
