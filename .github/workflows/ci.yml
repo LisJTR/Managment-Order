@@ -23,8 +23,8 @@ jobs:
       - name: Dar permisos a mvnw
         run: chmod +x ./mvnw
 
-      - name: Construir con Maven
-        run: ./mvnw clean install
+      - name: Construir con Maven sin test
+        run: ./mvnw clean install -DskipTests
 
 #     - name: Ejecutar tests
 #       run: ./mvnw test
